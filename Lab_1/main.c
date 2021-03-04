@@ -37,6 +37,5 @@ int main(void) {
             printf("%d%s", i, " ");
         }
     }
-    getchar();
     return 0;
 }
