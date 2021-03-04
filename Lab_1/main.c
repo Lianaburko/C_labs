@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-#include <main.h>
+#include "main.h"
 
 int sum_of_digits(int number) {
     int sum_of_digits = 0;
