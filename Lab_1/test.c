@@ -11,4 +11,5 @@ int test(){
 #undef main 
 int main(){
     test();
+    return 0;
 }

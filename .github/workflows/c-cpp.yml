@@ -14,5 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: complition
+      working-directory: ./Lab_1
       run: make Makefile all
 
