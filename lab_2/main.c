@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-/*#include "main.h"*/
+#include "main.h"
 
 int Checking_input(int day, int month, int year){
     if (year < 0 || day <= 0 || month <= 0) {
