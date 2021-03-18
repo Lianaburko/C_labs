@@ -176,18 +176,11 @@ void Day_of_the_week(int day, int month, int year){
     int date1 = Amount_of_days_after_Criest(15, 3, 2021); /*Monday*/
     int date2 = Amount_of_days_after_Criest(day, month, year);
     int difference = (date1 - date2);
-    if (difference < 0){
-        difference = -1*difference;
-        difference = 7 - difference;
-    }
-    difference = difference % 7;
+    difference = (difference % 7 + 7) % 7;
     switch(difference){
         case 0: 
             printf("Monday\n");
-            break;
-        case 7: 
-            printf("Monday\n");
-            break;    
+            break;   
         case 1: 
             printf("Sunday\n");
             break;
