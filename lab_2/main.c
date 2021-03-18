@@ -178,12 +178,16 @@ void Day_of_the_week(int day, int month, int year){
     int difference = (date1 - date2);
     if (difference < 0){
         difference = -1*difference;
+        difference = 7 - difference;
     }
     difference = difference % 7;
     switch(difference){
         case 0: 
             printf("Monday\n");
             break;
+        case 7: 
+            printf("Monday\n");
+            break;    
         case 1: 
             printf("Sunday\n");
             break;
