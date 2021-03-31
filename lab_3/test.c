@@ -26,6 +26,7 @@ void test(){
             assert(array[i][j] <= array[i_max][j_max]);
         }
     }    
+    free(array);
 }
 
 #undef main 
