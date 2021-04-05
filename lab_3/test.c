@@ -4,11 +4,20 @@
 
 void test(){
     int n = 4, m = 5;
-    int** array;
-    array = (int**)malloc(n * sizeof(int*));
-    int i = 0, j = 0;
+    int i = 0, j = 0, k = 0;
+    int** array = (int**)malloc(n * sizeof(int*));
+    if (array == NULL) {
+        return 0;
+    }
     for (i = 0; i < n; i++) {
         array[i] = (int*)malloc(m * sizeof(int));
+        if (array[i] == NULL) {
+            for (k = 0; k < i; k++) {
+                free((array[k]));
+            }
+            free(array);
+            return 0;
+        }
     }
 
     int max = 0;
