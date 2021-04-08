@@ -25,13 +25,13 @@ void test(){
   char* res = (char*)malloc((30)*sizeof(char));
   if (res == NULL) {
     printf("MEMORY ERROR");
-    exit(0);
+    return;
   }
 
   char* sum = (char*)malloc((30)*sizeof(char));
   if (sum == NULL) {
     printf("MEMORY ERROR");
-    exit(0);
+    return;
   }
 
   res = "24800412111231";
