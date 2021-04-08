@@ -1,0 +1,11 @@
+ban
+cat
+man
+sad
+date
+cute
+rat 
+red
+dog
+
+
