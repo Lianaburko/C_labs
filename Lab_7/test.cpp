@@ -59,6 +59,22 @@ int main(){
     pat1.set_date_of_coming({5,12,2020});
     pat1.set_date_of_ending({10,2,2021});
     pat1.set_address("Minsk, Angarskaya street, 5");
+
+    pat2.set_name("Artem Morozov");
+    pat2.set_date_of_coming({10,10,2020});
+    pat2.set_date_of_ending({10,3,2021});
+
+    pat3.set_name("Alehander Pushkin");
+    pat3.set_date_of_coming({20,11,2020});
+    pat3.set_date_of_ending({20,3,2021});
+
+    pat4.set_name("Sergey Esenin");
+    pat4.set_date_of_coming({15,10,2020});
+    pat4.set_date_of_ending({20,2,2021});
+
+    pat5.set_name("Napoleon Bonaparte");
+    pat5.set_date_of_coming({26,9,2020});
+    pat5.set_date_of_ending({30,4,2021});
     
     assert(pat1.get_name() == "Vasya Pupkin");
     assert(pat1.get_diagnosis() == "Hypertension");
@@ -96,10 +112,8 @@ int main(){
 
     dep1.add_room(&room1);
     dep1.add_room(&room2);
-    dep2.add_room(&room3);
 
     assert(dep1.get_rooms().size() == 2);
-    assert(dep2.get_rooms().size() == 1);
 
     dep1.add_doctor(&doc1);
     dep1.add_doctor(&doc2);
@@ -110,8 +124,24 @@ int main(){
     doc2.set_department(&dep2);
 
     assert(dep2.get_doctors().size() == 2);
+    assert(doc1.get_department() == "Heart department");
 
+    room3.set_department(&dep2);
     pat1.set_room(&room1);
+
+    assert(room3.get_department() == "Eye department");
     assert(pat1.get_room() == 106);
+
+    room1.add_patient(&pat2);
+    room1.add_patient(&pat3);
+
+    assert(room1.get_patients().size() == 3);
+    room1.add_patient(&pat4);
+    room1.add_patient(&pat5);
+
+    pat2.set_doctor(&doc1);
+
+
+
     return 0;
 }
