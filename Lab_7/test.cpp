@@ -57,7 +57,7 @@ int main(){
     pat1.set_diagnosis("Hypertension");
     pat1.set_date_of_birth({10,10,1988});
     pat1.set_date_of_coming({5,12,2020});
-    pat1.set_date_of_ending({10,2,2021});
+    pat1.set_date_of_ending({10,4,2021});
     pat1.set_address("Minsk, Angarskaya street, 5");
 
     pat2.set_name("Artem Morozov");
@@ -66,11 +66,11 @@ int main(){
 
     pat3.set_name("Alehander Pushkin");
     pat3.set_date_of_coming({5,2,2021});
-    pat3.set_date_of_ending({1,1,2021});
+    pat3.set_date_of_ending({1,3,2021});
 
     pat4.set_name("Sergey Esenin");
     pat4.set_date_of_coming({15,12,2020});
-    pat4.set_date_of_ending({20,2,2021});
+    pat4.set_date_of_ending({20,3,2021});
 
     pat5.set_name("Napoleon Bonaparte");
     pat5.set_date_of_coming({1,3,2021});
@@ -89,7 +89,7 @@ int main(){
     assert(date2.year == 2020);
     Date date3 = pat1.get_date_of_ending();
     assert(date3.day == 10);
-    assert(date3.month == 2);
+    assert(date3.month == 4);
     assert(date3.year == 2021);
 
     //room
@@ -147,6 +147,5 @@ int main(){
     pat1.set_doctor(&doc1);
 
     assert(doc1.get_patients().size() == 2);
-
     return 0;
 }
