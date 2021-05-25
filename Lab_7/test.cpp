@@ -65,7 +65,7 @@ int main(){
     pat2.set_date_of_ending({10,3,2021});
 
     pat3.set_name("Alehander Pushkin");
-    pat3.set_date_of_coming({5,2,2021});
+    pat3.set_date_of_coming({1,1,2021});
     pat3.set_date_of_ending({20,3,2021});
 
     pat4.set_name("Sergey Esenin");
@@ -139,7 +139,7 @@ int main(){
     assert(amount_of_days_after_Criest(date5) == 738453);
 
 
-    
+
 
 
     return 0;
