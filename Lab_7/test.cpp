@@ -130,8 +130,8 @@ int main(){
     room1.add_patient(&pat5);
     pat2.set_doctor(&doc1);
 
-    Date date1 = {19,11,2002};
-    assert(amount_of_days_after_Criest(date1) == 731553);
+    Date date4 = {19,11,2002};
+    assert(amount_of_days_after_Criest(date4) == 731553);
 
     dep1.add_doctor(&doc1);
     dep2.add_doctor(&doc2);
