@@ -115,11 +115,20 @@ int main(){
 
     assert(dep1.get_rooms().size() == 2);
 
-    doc3.set_department(&dep2);
+    room3.set_department(&dep2);
+    pat1.set_room(&room1);
 
-    assert(dep2.get_doctors().size() == 1);
-    assert(doc1.get_department() == "Heart department");
+    assert(room3.get_department() == "Eye department");
+    assert(pat1.get_room() == 106);
 
+    room1.add_patient(&pat2);
+    room1.add_patient(&pat3);
+
+    assert(room1.get_patients().size() == 3);
+    room1.add_patient(&pat4);
+    room1.add_patient(&pat5);
+
+    pat2.set_doctor(&doc1);
 
     return 0;
 }
