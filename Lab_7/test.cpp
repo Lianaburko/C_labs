@@ -120,11 +120,6 @@ int main(){
 
     assert(dep1.get_doctors().size() == 2);
 
-    doc3.set_department(&dep2);
-    doc2.set_department(&dep2);
-
-    assert(dep2.get_doctors().size() == 1);
-    assert(doc1.get_department() == "Heart department");
 
     return 0;
 }
