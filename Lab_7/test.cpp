@@ -138,14 +138,14 @@ int main(){
     Date date5 = {10,10,2021};
     assert(amount_of_days_after_Criest(date5) == 738453);
 
-    // dep1.add_doctor(&doc1);
-    // dep1.add_doctor(&doc2);
+    dep1.add_doctor(&doc1);
+    dep1.add_doctor(&doc2);
 
-    // assert(dep1.get_doctors().size() == 2);
-    // doc3.set_department(&dep2);
-    // assert(doc3.get_department() == "Eye department");
-    // pat1.set_doctor(&doc1);
+    assert(dep1.get_doctors().size() == 2);
+    doc3.set_department(&dep2);
+    assert(doc3.get_department() == "Eye department");
+    pat1.set_doctor(&doc1);
 
-    // assert(doc1.get_patients().size() == 2);
+    assert(doc1.get_patients().size() == 2);
     return 0;
 }
