@@ -128,13 +128,16 @@ int main(){
     assert(room1.get_patients().size() == 3);
     room1.add_patient(&pat4);
     room1.add_patient(&pat5);
+
     pat2.set_doctor(&doc1);
     assert(pat2.get_doctor() == "Ivanov Ivan Ivanovich");
 
     Date date4 = {10,10,2020};
     assert(amount_of_days_after_Criest(date4) == 738089);
 
-
+    dep1.add_doctor(&doc1);
+    dep1.add_doctor(&doc2);
+    assert(dep1.get_doctors().size() == 2);
 
     return 0;
 }
