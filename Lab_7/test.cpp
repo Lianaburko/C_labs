@@ -142,7 +142,11 @@ int main(){
     dep1.add_doctor(&doc2);
 
     assert(dep1.get_doctors().size() == 2);
+    doc3.set_department(&dep2);
+    assert(doc3.get_department() == "Eye department");
+    pat1.set_doctor(&doc1);
 
+    assert(doc1.get_patients().size() == 2);
 
     return 0;
 }
