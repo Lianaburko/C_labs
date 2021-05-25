@@ -10,11 +10,11 @@ struct Date {
     int year;
 };
 
-// class Hospital;
-// class Department;
-// class Doctor;
-// class Room;
-// class Patient;
+class Hospital;
+class Department;
+class Doctor;
+class Room;
+class Patient;
 
 class Hospital {
 private:
