@@ -149,18 +149,39 @@ int Patient::get_room() {
     return room->get_number_of_room();
 }
 
-int Days(Date date) {
-    return (date.year - 2021) * 365 + date.month * 30 + date.day;
+int amount_of_days_after_Criest(Date date){
+    int total_sum;
+    total_sum = date.year/4 * 366 + (date.year-date.year/4)*365;
+    int i;
+    for (i = 0; i < date.month; i++){
+        if (i == 2){
+            if (date.year % 4==0){
+                total_sum+=29;
+            }
+            else{
+                total_sum+=28;
+            }     
+        }
+        if (i == 1 || i == 3 || i == 5 || i == 7 || i == 8 || i == 10 || i == 12){
+            total_sum+=31;
+        }
+        if (i == 4 || i == 6 || i == 9 || i == 11) {
+          total_sum+=30;
+        }
+    }   
+
+    total_sum += date.day;
+    return total_sum;
 }
 
 void Room::add_patient(Patient* patient) {
     this->current_number_of_patients = current_number_of_patients++;
     if (current_number_of_patients > 4) {
-        int min = Days(patients[0]->get_date_of_ending());
+        int min = amount_of_days_after_Criest(patients[0]->get_date_of_ending());
         int index = 0;
         for (int i = 1; i < 4; i++) {
-            if (min > Days(patients[i]->get_date_of_ending())) {
-                min = Days(patients[i]->get_date_of_ending());
+            if (min > amount_of_days_after_Criest(patients[i]->get_date_of_ending())) {
+                min = amount_of_days_after_Criest(patients[i]->get_date_of_ending());
                 index = i;
             }
         }

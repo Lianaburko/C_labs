@@ -111,3 +111,5 @@ public:
     void set_room(Room* room);
     int get_room();
 };
+
+int amount_of_days_after_Criest(Date data);

@@ -105,6 +105,7 @@ int main(){
     room3.set_number_of_room(108);
     assert(room3.get_number_of_room() == 108);
 
+//сonnection
     hosp1.add_department(&dep1);
     hosp1.add_department(&dep2);
 
@@ -127,8 +128,17 @@ int main(){
     assert(room1.get_patients().size() == 3);
     room1.add_patient(&pat4);
     room1.add_patient(&pat5);
-
     pat2.set_doctor(&doc1);
+
+    Date date1 = {19,11,2002};
+    assert(amount_of_days_after_Criest(date1) == 731553);
+
+    dep1.add_doctor(&doc1);
+    dep2.add_doctor(&doc2);
+    dep2.add_doctor(&doc3);
+
+    assert(dep2.get_doctors().size() == 2);
+
 
     return 0;
 }
