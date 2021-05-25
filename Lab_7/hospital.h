@@ -68,7 +68,7 @@ private:
     string name;
     string speciality;
     string workpost;
-    Patient patient;
+    Patient* patient;
 public:
     void set_name(string name);
     string get_name();
