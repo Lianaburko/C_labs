@@ -142,5 +142,9 @@ int main(){
     dep1.add_doctor(&doc2);
     assert(dep1.get_doctors().size() == 2);
 
+    doc3.set_department(&dep2);
+    assert(doc3.get_department() == "Eye department");
+    assert(doc2.get_patients().size() == 1);
+
     return 0;
 }
