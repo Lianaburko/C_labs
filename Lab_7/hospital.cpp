@@ -164,13 +164,12 @@ void Room::add_patient(Patient* patient) {
                 index = i;
             }
         }
-        cout << "Threre is no free places in the room. Wait for" << patients[index]->get_date_of_ending().day;
+        cout << "There is no free places in the room. Wait for" << patients[index]->get_date_of_ending().day;
         cout << "." << patients[index]->get_date_of_ending().month << "." << patients[index]->get_date_of_ending().year;
     }
     else {
         this->patients.push_back(patient);
     }
-
 }
 
 vector <Patient*> Room::get_patients() {
