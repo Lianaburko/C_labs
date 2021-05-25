@@ -15,4 +15,4 @@ jobs:
       - name: Upload
         uses: codecov/codecov-action@v1
         with:
-          files: ./hospital.cpp.gcov
+          files: ./Lab_7/hospital.cpp.gcov
