@@ -138,6 +138,9 @@ int main(){
     Date date5 = {10,10,2021};
     assert(amount_of_days_after_Criest(date5) == 738453);
 
-   
+    dep1.add_doctor(&doc1);
+    dep1.add_doctor(&doc2);
+    assert(dep1.get_doctors().size() == 2);
+
     return 0;
 }
