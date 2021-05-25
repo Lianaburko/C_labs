@@ -90,10 +90,6 @@ void Doctor::add_patient(Patient* patient) {
     this->patients.push_back(patient);
 }
 
-void Department::add_doctor(Doctor* doctor) {
-    this->doctors.push_back(doctor);
-}
-
 vector <Patient*> Doctor::get_patients() {
     return this->patients;
 }
