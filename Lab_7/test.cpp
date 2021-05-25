@@ -142,7 +142,5 @@ int main(){
     dep1.add_doctor(&doc2);
     assert(dep1.get_doctors().size() == 2);
 
-    doc3.set_department(&dep2);
-    
     return 0;
 }
