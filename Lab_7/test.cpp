@@ -81,9 +81,10 @@ int main(){
     room1.set_number_of_room(106);
     assert(room1.get_number_of_room() == 106);
 
-
     hosp1.add_department(&dep1);
     hosp1.add_department(&dep2);
+
+    assert(hosp1.get_name_of_department().size() == 2);
 
     return 0;
 }
