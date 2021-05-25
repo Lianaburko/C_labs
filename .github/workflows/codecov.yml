@@ -9,10 +9,10 @@ jobs:
       - name: Test
         run: |
           cd Lab_7
-          g++ -std=c++17 -lm -fprofile-arcs -O0 -o test test.cpp hospital.cpp
+          g++ -std=c++17 -lm -ftest-coverage -fprofile-arcs -O0 -o test test.cpp hospital.cpp
           ./test
           gcov -abcfu hospital.cpp
       - name: Upload
         uses: codecov/codecov-action@v1
         with:
-          files: ./hospital.cpp.gcov
+          files: ./Lab_7/hospital.cpp.gcov
