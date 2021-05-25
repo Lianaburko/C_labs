@@ -175,6 +175,7 @@ int amount_of_days_after_Criest(Date date){
 }
 
 void Room::add_patient(Patient* patient) {
+    this->current_number_of_patients = current_number_of_patients++;
     if (current_number_of_patients >= 4) {
         int min = amount_of_days_after_Criest(patients[0]->get_date_of_ending());
         int index = 0;
@@ -190,7 +191,6 @@ void Room::add_patient(Patient* patient) {
     else {
         this->patients.push_back(patient);
     }
-    this->current_number_of_patients = current_number_of_patients++;
 }
 
 vector <Patient*> Room::get_patients() {
