@@ -130,12 +130,6 @@ void Patient::set_date_of_ending(Date date_of_ending) {
 Date Patient::get_date_of_ending() {
     return date_of_ending;
 }
-void Patient::set_number_of_room(int number_of_room) {
-    this->number_of_room = number_of_room;
-}
-int Patient::get_number_of_room() {
-    return number_of_room;
-}
 
 void Patient::set_doctor(Doctor* doctor) {
     this->doctor = doctor;

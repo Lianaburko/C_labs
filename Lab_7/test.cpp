@@ -81,10 +81,37 @@ int main(){
     room1.set_number_of_room(106);
     assert(room1.get_number_of_room() == 106);
 
+    Room room2;
+    room2.set_number_of_room(104);
+    assert(room2.get_number_of_room() == 104);
+    
+    Room room3;
+    room3.set_number_of_room(108);
+    assert(room3.get_number_of_room() == 108);
+
     hosp1.add_department(&dep1);
     hosp1.add_department(&dep2);
 
     assert(hosp1.get_name_of_department().size() == 2);
 
+    dep1.add_room(&room1);
+    dep1.add_room(&room2);
+    dep2.add_room(&room3);
+
+    assert(dep1.get_rooms().size() == 2);
+    assert(dep2.get_rooms().size() == 1);
+
+    dep1.add_doctor(&doc1);
+    dep1.add_doctor(&doc2);
+
+    assert(dep1.get_doctors().size() == 2);
+    
+    doc3.set_department(&dep2);
+    doc2.set_department(&dep2);
+
+    assert(dep2.get_doctors().size() == 2);
+
+    pat1.set_room(&room1);
+    assert(pat1.get_room() == 106);
     return 0;
 }

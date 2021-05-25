@@ -106,8 +106,6 @@ public:
     Date get_date_of_coming();
     void set_date_of_ending(Date date_of_ending);
     Date get_date_of_ending();
-    void set_number_of_room(int number_of_room);
-    int get_number_of_room();
     void set_doctor(Doctor* doctor);
     string get_doctor();
     void set_room(Room* room);
